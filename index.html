@@ -7,6 +7,17 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+ <!-- jQuery library -->
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+ 
+ <!-- Popper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+ 
+ <!-- Latest compiled JavaScript -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> 
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
@@ -81,7 +92,6 @@ body {
   background-color: #fff;
   height: 1px;
   width: 100%;
-  
 
 }
 
@@ -389,43 +399,96 @@ h1 a {
 <p style="margin-top: 40px;"></p>
 
 <!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+<div class="w3-container w3-light-grey" style="padding:128px 16px; margin-left: 100px;" id="contact" >
   <h3 class="w3-center" style="color: black; font-weight: bold;">Contact</h3>
   <hr id="dotted">
-  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
-  <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+
     <br>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
+    <form action="/action_page.php">
+      <div class="form-group">
+        <label for="companyname">Company Name:</label>
+        <input type="companyname" class="form-control" placeholder="Company Name" id="companyname">
+      </div>
+      <div class="form-group">
+        <label for="name">Name*:</label>
+        <input type="name" class="form-control" placeholder="Enter name" id="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email*:</label>
+        <input type="email" class="form-control" placeholder="Enter email" id="email">
+      </div>
+      <div class="form-group">
+        <label for="tel">Tel*:</label>
+        <input type="tel" class="form-control" placeholder="Enter tel" id="tel">
+      </div>
+      <div class="form-group">
+        <label for="zipcode">Zip code*:</label>
+        <input type="zipcode" class="form-control" placeholder="Enter zip code" id="zipcode">
+      </div>
+      <div class="form-group">
+        <label for="Prefecture">Name*:</label>
+        <input type="prefecture" class="form-control" placeholder="Enter prefecture" id="prefecture">
+      </div>
+      <div class="form-group">
+        <label for="street">Street*:</label>
+        <input type="street" class="form-control" placeholder="Enter street" id="street">
+      </div>
+      <div class="form-group">
+        <label for="building">Building*:</label>
+        <input type="building" class="form-control" placeholder="Enter building" id="building">
+      </div>
+      <div class="form-group form-check" >
+        <label class="form-check-label" style="margin: 10px;">
+        <input class="form-check-input" type="checkbox" checked="true"/> Both
+        <hr>
+    
+        </label>
+        <div>
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" style="padding: 10px;"> Main only
+          <hr>
+        <br>
+        </label>
+        </div>
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox"> Option Only
+          <hr>
+        <br>
+        </label>
+      </div>
+
+      <label for="cars">Goods*</label>
+      <select name="goods" id="goods" class="form-control" style="width: 60%;">
+        <optgroup label="Goods">
+          <option value="good1">Good 1</option>
+          <option value="good2">Good 2</option>
+        </optgroup>
+      
+      </select>
+      <br>
+      <br>
+
+      <p>Order Detail</p>
+
+    
+      <textarea id="orderdetail" name="orderdetail" rows="4" cols="50" placeholder="Enter more details about your order">
+        
+      </textarea>
+
+  
+    <br>
+    <br>
+      <button type="submit" class="btn btn-secondary" style="width: 60%;">Send</button>
+    </form> 
     <!-- Image of location/map -->
-    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
   </div>
 </div>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+
+
+  <p>Coded by Stephen Muindi &copy; 2023</p>
 </footer>
  
 <script>
@@ -448,7 +511,6 @@ function w3_open() {
     mySidebar.style.display = 'block';
   }
 }
-
 // Close the sidebar with the close button
 function w3_close() {
     mySidebar.style.display = "none";
