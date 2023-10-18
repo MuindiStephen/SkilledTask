@@ -1,20 +1,459 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Skilled Task</title>
-<link rel="stylesheet" href="styles.css">
+<title>Skilled Task </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+#case {
+    background-color: orange;
+    border-radius: 15px; 
+    padding: 10px 20px;
+    margin: 5px;
+    display: inline;
+}
+
+body {
+          
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .plan-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .plan {
+            flex: 0 1 calc(50% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+        .plan h2 {
+            color: #333;
+        }
+        .price {
+            font-size: 24px;
+            color: #007BFF;
+        }
+        .description {
+            margin-top: 10px;
+        }
+        .cta-button {
+            display: block;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+#demo {
+  background-color: orange;
+    border-radius: 15px; 
+    padding: 10px 20px;
+    margin :5px;
+}
+
+#dotted {
+  border: none;
+  border-top: 1px dotted #f00;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  width: 100%;
+  
+
+}
+
+#order {
+  background-color: red;
+    border-radius: 15px; 
+    padding: 10px 20px;
+    margin: 5px;
+    display: inline-block;
+}
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/mac.jpg");
+  min-height: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+h1 a {
+  font-size: 36px;
+}
+</style>
 </head>
 <body>
 
-    <div class="topnav" id="myTopnav">
-        <a href="#case" class="active">Case</a>
-        <a href="#demo">Demo</a>
-        <a href="#contact">Order</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+  
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+     <strong> <a href="#case" class="w3-bar-item w3-button" id="case" style="color: white;font-weight: bold; " >Case</a></strong>
+    </strong><a href="#demo" class="w3-bar-item w3-button" id="demo" style="color:white;font-weight: bold;"> Demo</a></strong>
+      <strong><a href="#order" class="w3-bar-item w3-button" id="order" style="color:white; font-weight: bold;"></i> Order</a></strong>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Case</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Demo</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Order</a>
+
+</nav>
+
+
+<!-- Feature Section -->
+<div class="w3-container" style="padding:108px 16px" id="about">
+  <div style="display: flex; align-items:center; justify-content: space-between;">
+    <h3 style="font-size: 100px; color: black; font-weight: bold; text-align: left; margin-left: 20px;" >SKILLED</h3>
+    <img src="main_image.png" style="display: inline-block;" alt="Main Image" />
+  </div>
+  <p style="display: inline-block; color: white;margin-left: 30px; padding-left: 30px; padding-right: 30px; border-radius: 8px; background-color: red; font-weight: bold;">FREE TRIAL</p>
+
+  <div style="display: flex; align-items: center; text-align: center; margin-top: 100px;">
+    <img src="/home/md-steve/Pictures/image2.png" style="display: inline-block; float: left; margin-left: -30px;" />
+    <h1 style="margin-left: 400px;">FEATURE</h1>
+  </div>
+  <div class="w3-row-padding w3-center" style="margin-top: 2px; display: flex; flex-direction: column; align-items: center;">
+    <div class="w3-quarter">
+        <i><img src="icon1.png"/></i>
+        <h2 class="w3-large" style="font-weight: bold;">POINT 1</h2>
+        <p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-quarter">
+      <i><img src="icon2.png"/></i>
+        <h2 class="w3-large" style="font-weight: bold;">POINT 2</h2>
+        <p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-quarter">
+      <i><img src="icon3.png"/></i>
+        <h2 class="w3-large" style="font-weight: bold;">POINT 3</h2>
+        <p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    </div>
+
+</div>
+
+
+</div>
+<!-- Function ection -->
+<div class="w3-container"  style="display: flex;justify-content: space-between;padding:128px 16px; background-color: #d5dbd6;" id="team">
+  <h3 class="w3-left" style="padding: top 0; margin-left: 60px; font-weight: bold;">FUNCTION</h3>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom" style="background-color: white;">
+      <div class="w3-card">
+      
+        <div class="w3-container">
+          <h3>Function 1</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti explicabo labore saepe cum impedit aliquam. Perspiciatis quas iure vitae officia tempore beatae voluptates culpa. Nesciunt dolor sit nulla necessitatibus laborum.</p>
+          <p><button class="w3-button w3-light-grey w3-block" style="background-color: orange;">To etail</button></p>
+        </div>
       </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom" style="background-color: white;">
+      <div class="w3-card">
+      
+        <div class="w3-container">
+          <h3>Function 2</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti explicabo labore saepe cum impedit aliquam. Perspiciatis quas iure vitae officia tempore beatae voluptates culpa. Nesciunt dolor sit nulla necessitatibus laborum.</p>
+          <p><button class="w3-button w3-light-grey w3-block"  style="background-color: orange; color: white;">To etail</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom" style="background-color: white;">
+      <div class="w3-card">
+      
+        <div class="w3-container">
+          <h3>Function 3</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti explicabo labore saepe cum impedit aliquam. Perspiciatis quas iure vitae officia tempore beatae voluptates culpa. Nesciunt dolor sit nulla necessitatibus laborum.</p>
+          <p><button class="w3-button w3-light-grey w3-block" style="background-color: orange; color: white;">To etail</button></p>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+<!-- Price Section that is plans-->
+<!--Subscription plan-->
+<div class="w3-container w3-center" style="padding:128px 16px" id="pricing">
+  <h3 style="text-align: left; margin-left: 20px; font-weight: bold;">PRICE</h3>
+
+  <p class="w3-large" style="color: blue; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">Subscription Plan.</p>
+  <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">5$ / Month.</p>
+  <p class="w3-small" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eos esse maiores ipsam deserunt harum sed quisquam. Omnis fuga voluptatibus, architecto reiciendis blanditiis ea maiores aspernatur totam maxime deleniti eum!</p>
+  <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">[Feature]</p>
+    <h5 class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro iusto reprehenderit veritatis quis consequuntur, laudantium repellendus placeat, sapiente illum aspernatur inventore labore enim optio explicabo hic quaerat mollitia. Aperiam.</h5>
+    <h5 class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum nihil veniam autem, quod nesciunt similique dolores cum numquam incidunt asperiores praesentium blanditiis sunt harum quidem provident id, quia repellat fuga?</h5>
+
+    <p></p>
+    <p></p>
+    <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">[Option]</p>
+    <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto non labore est voluptates nesciunt recusandae, nulla ea id doloremque voluptas animi dolorem possimus quaerat voluptate quo error, nisi amet vel?.</p>
+    <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illum placeat aliquid sequi neque rem, praesentium ducimus odit sed dolore numquam? Quo, sapiente porro ab distinctio quidem at in consectetur.</p>
+    <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, maxime? Nesciunt sunt similique totam neque quae sequi aperiam consequuntur, voluptatibus rerum. Voluptatibus consequatur amet doloremque at eaque, ipsum dolore impedit.</p>
+
+    <hr>
+    
+</div>
+
+<!---Purchase plan-->
+<div class="w3-container w3-center" style="" id="pricing">
+  
+
+  <p class="w3-large" style="color: red; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">Purchase Plan.</p>
+  <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">50$</p>
+  <p class="w3-small" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eos esse maiores ipsam deserunt harum sed quisquam. Omnis fuga voluptatibus, architecto reiciendis blanditiis ea maiores aspernatur totam maxime deleniti eum!</p>
+  <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">[Contents]</p>
+    <h5 class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro iusto reprehenderit veritatis quis consequuntur, laudantium repellendus placeat, sapiente illum aspernatur inventore labore enim optio explicabo hic quaerat mollitia. Aperiam.</h5>
+    <h5 class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum nihil veniam autem, quod nesciunt similique dolores cum numquam incidunt asperiores praesentium blanditiis sunt harum quidem provident id, quia repellat fuga?</h5>
+    <h5 class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 100px;margin-top: 30px;">*Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro iusto reprehenderit veritatis quis consequuntur, laudantium repellendus placeat, sapiente illum aspernatur inventore labore enim optio explicabo hic quaerat mollitia. Aperiam.</h5>
+    <h5 class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 100px;margin-top: 30px;">*Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum nihil veniam autem, quod nesciunt similique dolores cum numquam incidunt asperiores praesentium blanditiis sunt harum quidem provident id, quia repellat fuga?</h5>
+    <p></p>
+    <p></p>
+    <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">[Option]</p>
+    <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto non labore est voluptates nesciunt recusandae, nulla ea id doloremque voluptas animi dolorem possimus quaerat voluptate quo error, nisi amet vel?.</p>
+    <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illum placeat aliquid sequi neque rem, praesentium ducimus odit sed dolore numquam? Quo, sapiente porro ab distinctio quidem at in consectetur.</p>
+    <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, maxime? Nesciunt sunt similique totam neque quae sequi aperiam consequuntur, voluptatibus rerum. Voluptatibus consequatur amet doloremque at eaque, ipsum dolore impedit.</p>
+    <hr> 
+</div>
+
+<!--Option plan-->
+<div class="container">
+  <p class="w3-large" style="text-align: left; color: black; font-weight: bold; margin-left: 0px; margin-top: 30px;">Option Plan.</p>
+
+  <div class="plan-container">
+    
+      <div class="plan">
+        
+          <h3 style="color: green;">Support Menu</h3>
+          <p style="font-weight: bold;">$10/monthly</p>
+          <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A harum magnam id totam dolor blanditiis facilis, commodi aliquam, similique iusto, voluptate fugit consequuntur. Quod nulla modi beatae autem. Qui, sed.</p>
+          
+      </div>
+      <div class="plan">
+        <h3 style="color: pink;">Basic Customize</h3>
+        <p style="font-weight: bold;">$20/monthly</p>
+        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A harum magnam id totam dolor blanditiis facilis, commodi aliquam, similique iusto, voluptate fugit consequuntur. Quod nulla modi beatae autem. Qui, sed.</p>
+        
+    </div>
+  </div>
+  <div class="plan-container">
+    <div class="plan">
+      <h3 style="color: #367cc7;">Professional Customize</h3>
+      <p style="font-weight: bold;">$100/monthly</p>
+      <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A harum magnam id totam dolor blanditiis facilis, commodi aliquam, similique iusto, voluptate fugit consequuntur. Quod nulla modi beatae autem. Qui, sed.</p>
+      
+  </div>
+  <div class="plan">
+    <h3 style="color: orange;">Other Customize</h3>
+    <p style="font-weight: bold;">Contact to us</p>
+    <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A harum magnam id totam dolor blanditiis facilis, commodi aliquam, similique iusto, voluptate fugit consequuntur. Quod nulla modi beatae autem. Qui, sed.</p>
+    
+</div>
+
+<p>* Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quibusdam ab enim consequatur sint accusantium dignissimos distinctio hic, praesentium corrupti soluta dolor quod. Animi officia aspernatur est recusandae possimus ipsum.</p>
+  </div>
+</div>
+
+<!--Operating environment-->
+<hr>
+
+<h3 style="font-weight: bold; margin-left: 60px;">Operating Environment</h3>
+<p style="margin-left: 100px;">[Operating Environment]</p>
+<p class="w3-small" style="margin-left: 100px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore ullam blanditiis ipsa sint assumenda dolore possimus veniam vero sit amet quibusdam veritatis eos, excepturi rerum esse similique rem! Dolore, quos?</p>
+<br>
+<p style="margin-left: 100px;">[Server requirements]</p>
+<ul style="margin-left: 100px;">
+  <li>Apache</li>
+  <li>PHP</li>
+  <li>  *PHP 5.6.x / 7.0.x /7.1.x / 7.2.x</li>
+  <li>Database SQLite</li>
+  <li>MySQL  5.6
+  </li>
+</ul> 
+
+<br>
+<hr>
+
+<p style="margin-left: 100px;">[Q & A]</p>
+<p style="margin-left: 100px;"> Q. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, similique dolorum recusandae necessitatibus laboriosam debitis libero blanditiis obcaecati fugit impedit veritatis ut nam rerum. Iste amet quo perferendis rem veniam?</p>
+<p style="margin-left: 100px;">A. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam itaque adipisci porro doloribus commodi, corporis nobis ipsam fuga consectetur ad omnis dignissimos natus alias deserunt maiores quaerat praesentium perferendis non.</p>
+
+<p><Br></Br></p>
+<p style="margin-left: 100px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eaque commodi atque nisi error temporibus iusto. Nam alias, fugit ducimus animi sed ipsa vero, laborum quaerat rerum cum quibusdam a?</p>
+
+<br>
+<hr>
+
+<!---Compare plans div-->
+<div style="background-color: #c4c9cf;">
+<h3 style="font-weight: bold; margin-left: 100px; margin-right: 20px;">Compare Plans</h3>
+<table style="margin-left: 100px; width: 100%; text-align:center; background-color: white;">
+  <tr>
+    <th>     </th>
+    <th style="background-color: darkblue; color: white;">Subscription plan</th>
+    <th style="background-color: red; color: white;">Purchase plan</th>
+  </tr>
+  <tr>
+    <td><strong>Function</strong></td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td><strong>Responsive</strong></td>
+    <td>-</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td><strong>Acting as</strong></td>
+    <td>-</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td><strong>How to offer</strong></td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td><strong>init cost</strong></td>
+    <td>-</td>
+    <td>_</td>
+  </tr>
+  <tr>
+    <td><strong>Period</strong></td>
+    <td>3 month</td>
+    <td>_</td>
+  </tr>
+</table> 
+</div>
+
+<br>
+
+<strong><h2 style="margin-left: 100px; font-weight: bold;">Flow</h2>
+</strong>
+
+<div style="background-color: white;">
+  <img src="steps.png" width="80%" height="480px;"style=" margin-left:100px;"/>
+</div>
+<div style="background-color: white;">
+  <img src="people.png" width="50%" style="float: right;"/>
+</div>
+
+
+<br>
+<hr>
+<br>
+<br>
+<p style="margin-top: 40px;"></p>
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center" style="color: black; font-weight: bold;">Contact</h3>
+  <hr id="dotted">
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    <!-- Image of location/map -->
+    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
 
 </body>
-</html> 
+</html>
