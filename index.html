@@ -129,7 +129,7 @@
                 eiusmod tempor incididunt ut labore
               </p>
 
-              <button class="btn function-btn btn-sm">To etail</button>
+              <button class="btn function-btn btn-sm" style="color: white;">To etail</button>
             </div>
             <div
               class="card function-card-item bg-white py-3 px-2 border-none shadow-sm"
@@ -140,7 +140,7 @@
                 eiusmod tempor incididunt ut labore
               </p>
 
-              <button class="btn function-btn btn-sm">To etail</button>
+              <button class="btn function-btn btn-sm" style="color: white;">To etail</button>
             </div>
             <div
               class="card function-card-item bg-white py-3 px-2 border-none shadow-sm"
@@ -151,7 +151,7 @@
                 eiusmod tempor incididunt ut labore
               </p>
 
-              <button class="btn function-btn btn-sm">To etail</button>
+              <button class="btn function-btn btn-sm" style="color: white;">To etail</button>
             </div>
           </div>
         </div>
@@ -460,7 +460,7 @@
               <thead>
                 <tr>
                   <th></th>
-                  <th class="subscription-cell">Subscription Plan</th>
+                  <th class="subscription-cell" style="background-color: darkblue;">Subscription Plan</th>
                   <th class="purchase-cell">Purchase Plan</th>
                 </tr>
               </thead>
@@ -598,19 +598,19 @@
               </div>
               <div class="input-cont ms-2">
                 <label for="ind-name" class="form-label font-heavy"
-                  >Name<span class="required">*</span></label
+                  >Name<span class="required" style="color: red;">*</span></label
                 >
                 <input type="text" name="" id="ind-name" class="form-control" />
               </div>
               <div class="input-cont me-2">
                 <label for="email" class="form-label font-heavy"
-                  >Email<span class="required">*</span></label
+                  >Email<span class="required" style="color: red;">*</span></label
                 >
                 <input type="email" name="" id="email" class="form-control" />
               </div>
               <div class="input-cont ms-2">
                 <label for="tel" class="form-label font-heavy"
-                  >Tel<span class="required">*</span></label
+                  >Tel<span class="required" style="color: red;">*</span></label
                 >
                 <input type="text" name="" id="tel" class="form-control" />
               </div>
@@ -619,7 +619,7 @@
             <div class="zip-code">
               <div class="input-cont">
                 <label for="zip-code" class="form-label font-heavy"
-                  >Zip Code <span class="required">*</span></label
+                  >Zip Code <span class="required" style="color: red;">*</span></label
                 >
                 <div class="d-flex">
                   <input
@@ -641,7 +641,7 @@
             <div class="d-flex street-data">
               <div class="input-cont me-2">
                 <label for="prefecture" class="form-label font-heavy"
-                  >Prefecture<span class="required">*</span></label
+                  >Prefecture<span class="required" style="color: red;">*</span></label
                 >
                 <select name="" id="prefecture" class="form-select">
                   <option value="">1</option>
@@ -651,7 +651,7 @@
               </div>
               <div class="input-cont ms-2">
                 <label for="street" class="form-label font-heavy"
-                  >Street <span class="required">*</span></label
+                  >Street <span class="required" style="color: red;">*</span></label
                 >
                 <input type="text" name="" id="street" class="form-control" />
               </div>
@@ -665,9 +665,9 @@
 
             <div class="order-contents my-5 d-flex">
               <label class="form-label font-heavy"
-                >Order Contents <span class="required">*</span></label
+                >Order Contents <span class="required" style="color: red;">*</span></label
               >
-              <div class="radio-grp">
+              <div class="radio-grp" style="display: inline-flex; flex-direction: row;">
                 <div class="form-input-sect px-4 relative">
                   <input
                     class="form-input"
@@ -680,6 +680,7 @@
                     src="./assets/tick.svg"
                     alt=""
                     class="form-img absolute"
+                
                   />
                   <label class="form-check-label ps-2" for="both">Both</label>
                 </div>
@@ -722,12 +723,11 @@
 
             <div class="input-cont">
               <label for="goods" class="form-label font-heavy"
-                >Goods <span class="required">*</span></label
-              >
+                >Goods <span class="required">*</span></label>
               <select name="" id="goods" class="form-select">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
+                <option value="">goods 1</option>
+                <option value="">goods 2</option>
+                <option value="">goods 3</option>
               </select>
             </div>
 
@@ -769,6 +769,8 @@
     const radioBtns = document.querySelectorAll(".form-input-sect");
     const formImage = document.querySelector(".form-img");
 
+
+
     radioBtns.forEach((button) => {
       button.addEventListener("click", () => {
         const allRadioInputs = document.querySelectorAll(".form-input");
@@ -780,5 +782,7 @@
         button.children[1].style.opacity = 1;
       });
     });
+
+
   </script>
 </html>
