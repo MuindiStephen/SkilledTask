@@ -1,542 +1,784 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Skilled Task </title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <!-- Latest compiled and minified CSS -->
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./pagestyle.css" />
+    <script src="./index.js" defer></script>
+    <title>Skilled Task</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- Navbar section -->
+      <section>
+        <nav class="justify-content-end shadow-sm px-5 py-2 big-nav">
+          <button class="mx-2 px-5 btn btn-sm function-btn text-white">
+            Case
+          </button>
+          <button class="mx-2 px-5 btn btn-sm function-btn text-white">
+            Demo
+          </button>
+          <button class="me-5 px-5 ml-2 btn btn-sm btn-danger">Order</button>
+        </nav>
+        <nav class="justify-content-end shadow-sm px-5 py-2 small-nav relative">
+          <button class="me-5 px-5 ml-2 btn btn-sm btn-danger">Order</button>
+          <button class="menu-btn">
+            <img src="./assets/menu.svg" alt="" />
+          </button>
+          <div class="bg-white absolute skilled-nav-options">
+            <div class="border-bottom small-nav-option">
+              <p>Case</p>
+            </div>
+            <div class="small-nav-option">
+              <p>Demo</p>
+            </div>
+          </div>
+        </nav>
+      </section>
 
- <!-- jQuery library -->
- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
- 
- <!-- Popper JS -->
- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
- 
- <!-- Latest compiled JavaScript -->
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> 
-<style>
-
-@media (max-width: 2000px) {
-    #order{
-      display: inline-block;
-    }
-}
-
-
-@media (max-width:1000px) {
-  table {
-    margin: 0 auto;
-    max-width: 100%;
-   }
-  
-}
-
-
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
-
-#case {
-    background-color: orange;
-    border-radius: 15px; 
-    padding: 10px 20px;
-    margin: 5px;
-    display: inline;
-}
-
-body { 
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .plan-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .plan {
-            flex: 0 1 calc(50% - 20px);
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #fff;
-        }
-        .plan h2 {
-            color: #333;
-        }
-        .price {
-            font-size: 24px;
-            color: #007BFF;
-        }
-        .description {
-            margin-top: 10px;
-        }
-        .cta-button {
-            display: block;
-            margin-top: 20px;
-            background-color: #007BFF;
-            color: #fff;
-            text-align: center;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-#demo {
-  background-color: orange;
-    border-radius: 15px; 
-    padding: 10px 20px;
-    margin :5px;
-}
-
-#dotted {
-  border: none;
-  border-top: 1px dotted #f00;
-  color: #fff;
-  background-color: #fff;
-  height: 1px;
-  width: 100%;
-
-}
-
-#order {
-  background-color: red;
-    border-radius: 15px; 
-    padding: 10px 20px;
-    margin: 5px;
-}
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("/w3images/mac.jpg");
-  min-height: 100%;
-}
-
-table, th, td {
-  border: 1px solid gray;
-  border-collapse: collapse;
-  padding: 8px;
-}
-
-.w3-bar .w3-button {
-  padding: 16px;
-}
-
-h1 a {
-  font-size: 36px;
-}
-</style>
-</head>
-<body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-  
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <strong> <a href="#case" class="w3-bar-item w3-button" id="case" style="color: white;font-weight: bold; " >Case</a></strong>
-      <strong><a href="#demo" class="w3-bar-item w3-button" id="demo" style="color:white;font-weight: bold;"> Demo</a></strong>
-      <strong><a href="#order" class="w3-bar-item w3-button" id="order" style="color:white; font-weight: bold;"></i> Order</a></strong>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#case" onclick="w3_close()" class="w3-bar-item w3-button">Case</a>
-  <a href="#demo" onclick="w3_close()" class="w3-bar-item w3-button">Demo</a>
-  <a href="#order" onclick="w3_close()" class="w3-bar-item w3-button"
-  style="display: inline-block; @media (min-width: 200px) {
-    display: inline; 
-  }">Order</a>
-</nav>
-
-<!-- Feature Section -->
-<div class="w3-container" style="padding:108px 16px" id="about">
-  <div style="display: flex; align-items:center; justify-content: space-between;">
-    <h3 style="font-size: 100px; color: black; font-weight: bold; text-align: left; margin-left: 20px; font-family: 'Source Sans Pro','sans-serif'"">SKILLED</h3>
-    <img src="main_image.png" style="display: inline-block;" alt="Main Image" />
-  </div>
-  <p style="display: inline-block; color: white;margin-left: 30px; padding-left: 30px; padding-right: 30px; border-radius: 8px; background-color: red; font-weight: bold;text-align: center; font-family: 'Source Sans Pro','sans-serif'">FREE TRIAL</p>
-
-  <div style="display: flex; align-items: center; text-align: center; margin-top: 100px;">
-    <img src="/home/md-steve/Pictures/image2.png" style="display: inline-block; float: none; margin-left: -30px;" />
-    <h1 style="margin-left: 400px;font-family: 'Source Sans Pro','sans-serif'">FEATURE</h1>
-  </div>
-  <div class="w3-row-padding w3-center" style="margin-top: 2px; display: flex; flex-direction: column; align-items: center;">
-    <div class="w3-quarter">
-        <i><img src="icon1.png"/></i>
-        <h2 class="w3-large" style="font-weight: bold;font-family: 'Source Sans Pro','sans-serif'">POINT 1</h2>
-        <p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i><img src="icon2.png"/></i>
-        <h2 class="w3-large" style="font-weight: bold;font-family: 'Source Sans Pro','sans-serif'">POINT 2</h2>
-        <p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i><img src="icon3.png"/></i>
-        <h2 class="w3-large" style="font-weight: bold; font-family: 'Source Sans Pro','sans-serif'">POINT 3</h2>
-        <p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-
-</div>
-
-
-</div>
-<!-- Function ection -->
-<div class="w3-container"  style="display: flex;justify-content: space-between;padding:128px 16px; background-color: #d5dbd6;" id="function-section">
-  <h3 class="w3-left" style="padding: top 0; margin-left: 60px; font-weight: bold;font-family: 'Source Sans Pro','sans-serif'" >FUNCTION</h3>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-    <div class="w3-col l3 m6 w3-margin-bottom" style="background-color: white;">
-      <div class="w3-card">
-      
-        <div class="w3-container">
-          <h3 style="font-family: 'Source Sans Pro','sans-serif'">Function 1</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti explicabo labore saepe cum impedit aliquam. Perspiciatis quas iure vitae officia tempore beatae voluptates culpa. Nesciunt dolor sit nulla necessitatibus laborum.</p>
-          <p><button class="w3-button w3-light-grey w3-block" style="background-color: orange;">To etail</button></p>
+      <!-- skilled hero section -->
+      <section
+        class="d-flex align-items-center justify-content-end landing-image-cont"
+      >
+        <div class="skilled-text">
+          <h1 class="">SKILLED</h1>
+          <button class="btn btn-danger">FREE TRIAL</button>
         </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom" style="background-color: white;">
-      <div class="w3-card">
-      
-        <div class="w3-container">
-          <h3 style="font-family: 'Source Sans Pro','sans-serif';">Function 2</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti explicabo labore saepe cum impedit aliquam. Perspiciatis quas iure vitae officia tempore beatae voluptates culpa. Nesciunt dolor sit nulla necessitatibus laborum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"  style="background-color: orange; color: white;">To etail</button></p>
+        <div class="skilled-img card">
+          <img src="./assets/img-1.svg" class="w-100" alt="" />
         </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom" style="background-color: white;">
-      <div class="w3-card">
-      
-        <div class="w3-container">
-          <h3 style="font-family: 'Source Sans Pro','sans-serif'">Function 3</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti explicabo labore saepe cum impedit aliquam. Perspiciatis quas iure vitae officia tempore beatae voluptates culpa. Nesciunt dolor sit nulla necessitatibus laborum.</p>
-          <p><button class="w3-button w3-light-grey w3-block" style="background-color: orange; color: white;">To etail</button></p>
+      </section>
+
+      <!-- feature section -->
+      <section class="d-flex justify-content-start relative mt-5" id="feature">
+        <img src="./assets/img-2.svg" class="green-img absolute" alt="" />
+        <div class="feature-list-cont">
+          <h2 class="feature-header">FEATURE</h2>
+          <ul class="feature-list">
+            <li class="d-flex justify-content-start">
+              <img
+                src="./assets/icon-1.svg"
+                alt=""
+                class="feature-point-image"
+              />
+              <div>
+                <h2 class="feature-cont-header">POINT 1</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut
+                </p>
+              </div>
+            </li>
+            <li class="d-flex align-items-center">
+              <img
+                src="./assets/icon-2.svg"
+                alt=""
+                class="feature-point-image"
+              />
+              <div>
+                <h2 class="feature-cont-header">POINT 2</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut
+                </p>
+              </div>
+            </li>
+            <li class="d-flex align-items-center">
+              <img
+                src="./assets/icon-3.svg"
+                alt=""
+                class="feature-point-image"
+              />
+              <div>
+                <h2 class="feature-cont-header">POINT 3</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
-    </div>
-   
-  </div>
-</div>
+      </section>
 
-<!-- Price Section that is plans-->
-<!--Subscription plan-->
-<div class="w3-container w3-center" style="padding:128px 16px" id="pricing">
-  <h3 style="text-align: left; margin-left: 20px; font-weight: bold; font-family: 'Source Sans Pro','sans-serif'">PRICE</h3>
+      <!-- function section -->
+      <section class="my-5 bg-light py-5">
+        <div class="function-cont container">
+          <h2 class="function-title ps-2">FUNCTION</h2>
 
-  <p class="w3-large" style="color: blue; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">Subscription Plan.</p>
-  <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">5$ / Month.</p>
-  <p class="w3-small" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eos esse maiores ipsam deserunt harum sed quisquam. Omnis fuga voluptatibus, architecto reiciendis blanditiis ea maiores aspernatur totam maxime deleniti eum!</p>
+          <div class="d-flex function-card">
+            <div
+              class="card function-card-item bg-white py-3 px-2 border-none shadow-sm"
+            >
+              <h2 class="function-card-header">FUNCTION 1</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore
+              </p>
 
-  <p class="w3-medium" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">[Feature]</p>
-    <h5 class="w3-medium" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro iusto reprehenderit veritatis quis consequuntur, laudantium repellendus placeat, sapiente illum aspernatur inventore labore enim optio explicabo hic quaerat mollitia. Aperiam.</h5>
-    <h5 class="w3-medium" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum nihil veniam autem, quod nesciunt similique dolores cum numquam incidunt asperiores praesentium blanditiis sunt harum quidem provident id, quia repellat fuga?</h5>
+              <button class="btn function-btn btn-sm">To etail</button>
+            </div>
+            <div
+              class="card function-card-item bg-white py-3 px-2 border-none shadow-sm"
+            >
+              <h2 class="function-card-header">FUNCTION 2</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore
+              </p>
 
-    <p></p>
-    <p></p>
-    <p class="w3-medium" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">[Option]</p>
-    <p class="w3-medium" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto non labore est voluptates nesciunt recusandae, nulla ea id doloremque voluptas animi dolorem possimus quaerat voluptate quo error, nisi amet vel?.</p>
-    <p class="w3-medium" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illum placeat aliquid sequi neque rem, praesentium ducimus odit sed dolore numquam? Quo, sapiente porro ab distinctio quidem at in consectetur.</p>
-    <p class="w3-medium" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, maxime? Nesciunt sunt similique totam neque quae sequi aperiam consequuntur, voluptatibus rerum. Voluptatibus consequatur amet doloremque at eaque, ipsum dolore impedit.</p>
+              <button class="btn function-btn btn-sm">To etail</button>
+            </div>
+            <div
+              class="card function-card-item bg-white py-3 px-2 border-none shadow-sm"
+            >
+              <h2 class="function-card-header">FUNCTION 3</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore
+              </p>
 
-    <hr>
-    
-</div>
-
-<!---Purchase plan-->
-<div class="w3-container w3-center" id="pricing">
-  
-
-  <p class="w3-large" style="color: red; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">Purchase Plan.</p>
-  <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">50$</p>
-  <p class="w3-small" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eos esse maiores ipsam deserunt harum sed quisquam. Omnis fuga voluptatibus, architecto reiciendis blanditiis ea maiores aspernatur totam maxime deleniti eum!</p>
-  <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">[Contents]</p>
-    <h5 class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro iusto reprehenderit veritatis quis consequuntur, laudantium repellendus placeat, sapiente illum aspernatur inventore labore enim optio explicabo hic quaerat mollitia. Aperiam.</h5>
-    <h5 class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum nihil veniam autem, quod nesciunt similique dolores cum numquam incidunt asperiores praesentium blanditiis sunt harum quidem provident id, quia repellat fuga?</h5>
-    <h5 class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 100px;margin-top: 30px;">*Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro iusto reprehenderit veritatis quis consequuntur, laudantium repellendus placeat, sapiente illum aspernatur inventore labore enim optio explicabo hic quaerat mollitia. Aperiam.</h5>
-    <h5 class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 100px;margin-top: 30px;">*Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum nihil veniam autem, quod nesciunt similique dolores cum numquam incidunt asperiores praesentium blanditiis sunt harum quidem provident id, quia repellat fuga?</h5>
-    <p></p>
-    <p></p>
-    <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">[Option]</p>
-    <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto non labore est voluptates nesciunt recusandae, nulla ea id doloremque voluptas animi dolorem possimus quaerat voluptate quo error, nisi amet vel?.</p>
-    <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas illum placeat aliquid sequi neque rem, praesentium ducimus odit sed dolore numquam? Quo, sapiente porro ab distinctio quidem at in consectetur.</p>
-    <p class="w3-large" style="color: black; font-weight: bold;text-align: left;margin-left: 90px;margin-top: 30px;">- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, maxime? Nesciunt sunt similique totam neque quae sequi aperiam consequuntur, voluptatibus rerum. Voluptatibus consequatur amet doloremque at eaque, ipsum dolore impedit.</p>
-    <hr> 
-</div>
-
-<!--Option plan-->
-<div class="w3-container w3-cente">
-  <p class="w3-large" style="text-align: left; color: black; font-weight: bold; margin-left: 0px; margin-top: 30px;">Option Plan.</p>
-
-  <div class="plan-container">
-    
-      <div class="plan">
-        
-          <h3 style="color: green;">Support Menu</h3>
-          <p style="font-weight: bold;">$10/monthly</p>
-          <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A harum magnam id totam dolor blanditiis facilis, commodi aliquam, similique iusto, voluptate fugit consequuntur. Quod nulla modi beatae autem. Qui, sed.</p>
-          
-      </div>
-      <div class="plan">
-        <h3 style="color: pink;">Basic Customize</h3>
-        <p style="font-weight: bold;">$20/monthly</p>
-        <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A harum magnam id totam dolor blanditiis facilis, commodi aliquam, similique iusto, voluptate fugit consequuntur. Quod nulla modi beatae autem. Qui, sed.</p>
-        
-    </div>
-  </div>
-  <div class="plan-container">
-    <div class="plan">
-      <h3 style="color: #367cc7;">Professional Customize</h3>
-      <p style="font-weight: bold;">$100/monthly</p>
-      <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A harum magnam id totam dolor blanditiis facilis, commodi aliquam, similique iusto, voluptate fugit consequuntur. Quod nulla modi beatae autem. Qui, sed.</p>
-      
-  </div>
-  <div class="plan">
-    <h3 style="color: orange;">Other Customize</h3>
-    <p style="font-weight: bold;">Contact to us</p>
-    <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A harum magnam id totam dolor blanditiis facilis, commodi aliquam, similique iusto, voluptate fugit consequuntur. Quod nulla modi beatae autem. Qui, sed.</p>
-    
-</div>
-
-<p>* Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quibusdam ab enim consequatur sint accusantium dignissimos distinctio hic, praesentium corrupti soluta dolor quod. Animi officia aspernatur est recusandae possimus ipsum.</p>
-  </div>
-</div>
-
-
-
-<!--Operating environment-->
-<hr>
-
-<h3 style="font-weight: bold; margin-left: 60px;">Operating Environment</h3>
-<p style="margin-left: 100px;">[Operating Environment]</p>
-<p class="w3-small" style="margin-left: 100px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore ullam blanditiis ipsa sint assumenda dolore possimus veniam vero sit amet quibusdam veritatis eos, excepturi rerum esse similique rem! Dolore, quos?</p>
-<br>
-<p style="margin-left: 100px;">[Server requirements]</p>
-<ul style="margin-left: 100px;">
-  <li>Apache</li>
-  <li>PHP</li>
-  <li>  *PHP 5.6.x / 7.0.x /7.1.x / 7.2.x</li>
-  <li>Database SQLite</li>
-  <li>MySQL  5.6
-  </li>
-</ul> 
-
-<br>
-<hr>
-
-<p style="margin-left: 100px;">[Q & A]</p>
-<p style="margin-left: 100px;"> Q. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, similique dolorum recusandae necessitatibus laboriosam debitis libero blanditiis obcaecati fugit impedit veritatis ut nam rerum. Iste amet quo perferendis rem veniam?</p>
-<p style="margin-left: 100px;">A. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam itaque adipisci porro doloribus commodi, corporis nobis ipsam fuga consectetur ad omnis dignissimos natus alias deserunt maiores quaerat praesentium perferendis non.</p>
-
-<p><Br></Br></p>
-<p style="margin-left: 100px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eaque commodi atque nisi error temporibus iusto. Nam alias, fugit ducimus animi sed ipsa vero, laborum quaerat rerum cum quibusdam a?</p>
-
-<br>
-<hr>
-
-<!---Compare plans div-->
-<div style="background-color: #dae0db;">
-<h3 style="font-weight: bold; margin-left: 100px; margin-right: 20px;  font-family: 'Source Sans Pro','sans-serif'; padding: 20px;">Compare Plans</h3>
-<table style="margin-left: 100px; width: 70%;text-align:center; background-color: white; border-width: 1px gray; margin-bottom: 30px;" >
-  <tr>
-    <th>     </th>
-    <th style="background-color: darkblue; color: white;">Subscription plan</th>
-    <th style="background-color: red; color: white;">Purchase plan</th>
-  </tr>
-  <tr>
-    <td><strong>Function</strong></td>
-    <td>0</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td><strong>Responsive</strong></td>
-    <td>-</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td><strong>Acting as</strong></td>
-    <td>-</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td><strong>How to offer</strong></td>
-    <td>0</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td><strong>init cost</strong></td>
-    <td>-</td>
-    <td>_</td>
-  </tr>
-  <tr>
-    <td><strong>Period</strong></td>
-    <td>3 month</td>
-    <td>_</td>
-  </tr>
-</table> 
-</div>
-
-<br>
-
-<strong><h2 style="margin-left: 100px; font-weight: bold; font-family: 'Source Sans Pro', 'sans-serif';">Flow</h2>
-</strong>
-
-<div style="background-color: white;">
-  <img src="steps.png" width="80%" height="480px;"style=" margin-left:100px;"/>
-</div>
-<div style="background-color: white;">
-  <img src="people.png" width="50%" style="float: right;"/>
-</div>
-
-
-<br>
-<hr>
-<br>
-<br>
-<p style="margin-top: 40px;"></p>
-
-<!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px; margin-left: 100px;" id="contact" >
-  <h3 class="w3-center" style="color: black; font-weight: bold;">Contact</h3>
-  <hr id="dotted">
-
-    <br>
-    <form action="/">
-      <div class="form-group">
-        <label for="companyname">Company Name:</label>
-        <input type="companyname" class="form-control" placeholder="Company Name" id="companyname">
-      </div>
-      <div class="form-group">
-        <label for="name">Name*:</label>
-        <input type="name" class="form-control" placeholder="Enter name" id="name">
-      </div>
-      <div class="form-group">
-        <label for="email">Email*:</label>
-        <input type="email" class="form-control" placeholder="Enter email" id="email">
-      </div>
-      <div class="form-group">
-        <label for="tel">Tel*:</label>
-        <input type="tel" class="form-control" placeholder="Enter tel" id="tel">
-      </div>
-      <div class="form-group">
-        <label for="zipcode">Zip code*:</label>
-        <input type="zipcode" class="form-control" placeholder="Enter zip code" id="zipcode">
-      </div>
-      <div class="form-group">
-        <label for="Prefecture">Name*:</label>
-        <input type="prefecture" class="form-control" placeholder="Enter prefecture" id="prefecture">
-      </div>
-      <div class="form-group">
-        <label for="street">Street*:</label>
-        <input type="street" class="form-control" placeholder="Enter street" id="street">
-      </div>
-      <div class="form-group">
-        <label for="building">Building*:</label>
-        <input type="building" class="form-control" placeholder="Enter building" id="building">
-      </div>
-      <div class="form-group form-check" >
-        <label class="form-check-label" style="margin: 10px;">
-        <input class="form-check-input" type="checkbox" checked="true"/> Both
-        <hr>
-    
-        </label>
-        <div>
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" style="padding: 10px;"> Main only
-          <hr>
-        <br>
-        </label>
+              <button class="btn function-btn btn-sm">To etail</button>
+            </div>
+          </div>
         </div>
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox"> Option Only
-          <hr>
-        <br>
-        </label>
-      </div>
+      </section>
 
-      <label for="cars">Goods*</label>
-      <select name="goods" id="goods" class="form-control" style="width: 60%;">
-        <optgroup label="Goods">
-          <option value="good1">Good 1</option>
-          <option value="good2">Good 2</option>
-        </optgroup>
-      
-      </select>
-      <br>
-      <br>
+      <!-- price section -->
+      <section id="price" class="relative">
+        <img src="./assets/img-8.svg" class="absolute img-1" alt="" />
+        <img src="./assets/img-4.svg" class="absolute img-2" alt="" />
+        <img src="./assets/img-5.svg" class="absolute img-3" alt="" />
+        <img src="./assets/img-6.svg" class="absolute img-4" alt="" />
+        <img src="./assets/img-7.svg" class="absolute img-5" alt="" />
 
-      <p>Order Detail</p>
+        <div class="mt-5">
+          <h2 class="price-title mb-4 mt-5 font-heavy">PRICE</h2>
 
-    
-      <textarea id="orderdetail" name="orderdetail" rows="4" cols="50" placeholder="Enter more details about your order">
-        
-      </textarea>
+          <div class="card subscription-card border-none shadow-sm">
+            <img src="./assets/triangle-blue.svg" alt="" class="triangle" />
+            <div class="m-5">
+              <h2 class="subscription-plan-header">Subscription Plan</h2>
 
-  
-    <br>
-    <br>
-      <button type="submit" class="btn btn-secondary" style="width: 60%;">Send</button>
-    </form> 
-    <!-- Image of location/map -->
-  </div>
-</div>
+              <h6>$5 / Month</h6>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore.Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                ut labore.
+              </p>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
+              <p>[Feature]</p>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </li>
+              </ul>
 
+              <p>[Option]</p>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </li>
+              </ul>
 
-  <p>Coded by Stephen Muindi &copy; 2023</p>
-</footer>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+              <div class="dotted-line"></div>
 
+              <div class="service-provision">
+                <p>[Service provision]</p>
+                <ul class="service-provision-list">
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore.
+                  </li>
+                </ul>
 
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </p>
+                <ul class="service-provision-list">
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore.
+                  </li>
+                </ul>
 
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </p>
+                <ul class="service-provision-list">
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-</body>
+          <div class="card purchase-plan-card mt-5 border-none shadow-sm">
+            <img src="./assets/triangle-red.svg" alt="" class="triangle" />
+            <div class="m-5">
+              <h2 class="purchase-plan-header">Purchase Plan</h2>
+
+              <h6 class="font-heavy">$50</h6>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+
+              <p class="mb-0 ms-3">[Contents]</p>
+              <ul>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                  <ul class="contents-list-nested">
+                    <li>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore.
+                    </li>
+                    <li>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <p class="mb-0 ms-3">[Option]</p>
+              <ul class="option-list mb-0">
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </li>
+              </ul>
+              <p class="mb-0 ms-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+              <p class="ms-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore.
+              </p>
+
+              <div class="dotted-line"></div>
+
+              <div class="caution">
+                <p class="mb-0 ms-3">[Caution]</p>
+                <ul class="caution-list">
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore.
+                  </li>
+                  <li>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- option plan section -->
+      <section id="option-plan" class="mt-5">
+        <h2 class="option-plan-header font-heavy">Option Plan</h2>
+
+        <div class="d-flex option-plan-list">
+          <div class="card option-plan-list-option shadow-sm">
+            <img src="./assets/triangle-green.svg" alt="" class="triangle" />
+            <div class="option-plan-content-box">
+              <h2 class="support-menu-header">Support menu</h2>
+              <h6 class="font-heavy my-2">$10 / monthly</h6>
+              <p class="font-medium mt-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              </p>
+            </div>
+          </div>
+
+          <div class="card option-plan-list-option shadow-sm">
+            <img src="./assets/triangle-purple.svg" alt="" class="triangle" />
+            <div class="option-plan-content-box">
+              <h2 class="basic-customize-header">Basic Customize</h2>
+              <h6 class="font-heavy my-2">$20 / monthly</h6>
+              <p class="font-medium mt-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              </p>
+            </div>
+          </div>
+          <div class="card option-plan-list-option shadow-sm">
+            <img src="./assets/triangle-sky.svg" alt="" class="triangle" />
+            <div class="option-plan-content-box">
+              <h2 class="professional-customize-header">
+                Professional Customize
+              </h2>
+              <h6 class="font-heavy my-2">$100 / monthly</h6>
+              <p class="font-medium mt-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              </p>
+            </div>
+          </div>
+          <div class="card option-plan-list-option shadow-sm">
+            <img src="./assets/triangle-orange.svg" alt="" class="triangle" />
+            <div class="option-plan-content-box">
+              <h2 class="other-customize-header">Other Customize</h2>
+              <h6 class="font-heavy my-2">Contact to us</h6>
+              <p class="font-medium mt-3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <ul class="option-plan-disclaimer">
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- operating environment section -->
+      <section id="operating-env" class="card operating-env-card mt-5">
+        <h2 class="operating-env-header mt-5 mb-4 font-heavy ps-4">
+          Operating Environment
+        </h2>
+
+        <div class="card operating-env-card p-5 border-none shadow-sm">
+          <p class="mb-0">[Operating Environment]</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore.
+          </p>
+
+          <p class="mb-0">[Server Requirements]</p>
+          <ul class="mb-3">
+            <li>Apache</li>
+            <li>
+              PHP
+              <ul class="php-version">
+                <li>PHP 5.6.x / 7.0.x / 7.1.x / 7.2.x</li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul>
+            <li class="mb-3">Database SQLite</li>
+            <li>MySQL 5.6</li>
+          </ul>
+
+          <div class="dotted-line"></div>
+
+          <p class="mb-0">[Q & A]</p>
+          <p class="mb-0">
+            Q. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore.
+          </p>
+          <p>
+            A. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore.
+          </p>
+        </div>
+      </section>
+
+      <!-- Compare plans section-->
+      <section class="bg-light py-5">
+        <div id="compare-plans">
+          <h2 class="my-5">Compare Plans</h2>
+
+          <div class="table-cont">
+            <table class="table border-none shadow-sm mt-5">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="subscription-cell">Subscription Plan</th>
+                  <th class="purchase-cell">Purchase Plan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-left font-heavy">Function</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="text-left font-heavy">Responsive</td>
+                  <td>-</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="text-left font-heavy">Acting as</td>
+                  <td>-</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="text-left font-heavy">How to offer</td>
+                  <td>-</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="text-left font-heavy">Init Cost</td>
+                  <td>-</td>
+                  <td>--</td>
+                </tr>
+                <tr>
+                  <td class="text-left font-heavy">Period</td>
+                  <td>3 month</td>
+                  <td>--</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- flow section -->
+      <section>
+        <div id="flow-section" class="my-5">
+          <h2 class="mt-5 mb-4 px-5">Flow</h2>
+
+          <div>
+            <div class="d-flex my-5">
+              <img src="./assets/step-1.svg" alt="" />
+              <div class="mt-5 ms-4">
+                <h2>STEP 1</h2>
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </p>
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex my-5">
+              <img src="./assets/step-2.svg" alt="" class="mt-5" />
+              <div class="mt-5 ms-4">
+                <h2>STEP 2</h2>
+                <p class="mb-0 mt-0">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </p>
+              </div>
+            </div>
+            <div class="d-flex my-5">
+              <img src="./assets/step-3.svg" alt="" class="pb-5" />
+              <div class="mt-5 ms-4">
+                <h2>STEP 3</h2>
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </p>
+                <p class="mb-0">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end">
+            <img src="./assets/img-10.svg" alt="" class="w-100" />
+          </div>
+        </div>
+      </section>
+
+      <!-- contact section -->
+      <section class="bg-light my-5 relative overflow-x-hidden" id="contact">
+        <img
+          src="./assets/img-8.svg"
+          alt=""
+          class="absolute green-contact-img"
+        />
+        <img
+          src="./assets/img-9.svg"
+          alt=""
+          class="absolute orange-contact-img"
+        />
+        <div
+          class="card contact-card border-none border-radius-0 shadow-sm px-4 py-5"
+        >
+          <h2 class="text-center">Contact</h2>
+          <div class="dotted-line mt-1"></div>
+
+          <form>
+            <div class="personal-info d-flex ms-0">
+              <div class="input-cont me-2">
+                <label for="company-name" class="form-label font-heavy"
+                  >Company Name</label
+                >
+                <input
+                  type="text"
+                  name=""
+                  id="company-name"
+                  class="form-control"
+                />
+              </div>
+              <div class="input-cont ms-2">
+                <label for="ind-name" class="form-label font-heavy"
+                  >Name<span class="required">*</span></label
+                >
+                <input type="text" name="" id="ind-name" class="form-control" />
+              </div>
+              <div class="input-cont me-2">
+                <label for="email" class="form-label font-heavy"
+                  >Email<span class="required">*</span></label
+                >
+                <input type="email" name="" id="email" class="form-control" />
+              </div>
+              <div class="input-cont ms-2">
+                <label for="tel" class="form-label font-heavy"
+                  >Tel<span class="required">*</span></label
+                >
+                <input type="text" name="" id="tel" class="form-control" />
+              </div>
+            </div>
+
+            <div class="zip-code">
+              <div class="input-cont">
+                <label for="zip-code" class="form-label font-heavy"
+                  >Zip Code <span class="required">*</span></label
+                >
+                <div class="d-flex">
+                  <input
+                    type="number"
+                    name=""
+                    id="zip-code"
+                    class="form-control r-inp"
+                  />
+                  <input
+                    type="number"
+                    name=""
+                    id="zip-code2"
+                    class="form-control zip-code-inp ms-3"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex street-data">
+              <div class="input-cont me-2">
+                <label for="prefecture" class="form-label font-heavy"
+                  >Prefecture<span class="required">*</span></label
+                >
+                <select name="" id="prefecture" class="form-select">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                </select>
+              </div>
+              <div class="input-cont ms-2">
+                <label for="street" class="form-label font-heavy"
+                  >Street <span class="required">*</span></label
+                >
+                <input type="text" name="" id="street" class="form-control" />
+              </div>
+              <div class="input-cont">
+                <label for="building" class="form-label font-heavy"
+                  >Building</label
+                >
+                <input type="text" name="" id="building" class="form-control" />
+              </div>
+            </div>
+
+            <div class="order-contents my-5 d-flex">
+              <label class="form-label font-heavy"
+                >Order Contents <span class="required">*</span></label
+              >
+              <div class="radio-grp">
+                <div class="form-input-sect px-4 relative">
+                  <input
+                    class="form-input"
+                    type="radio"
+                    name="order-contents"
+                    id="both"
+                    value="option1"
+                  />
+                  <img
+                    src="./assets/tick.svg"
+                    alt=""
+                    class="form-img absolute"
+                  />
+                  <label class="form-check-label ps-2" for="both">Both</label>
+                </div>
+                <div class="form-input-sect px-4 relative">
+                  <input
+                    class="form-input"
+                    type="radio"
+                    name="order-contents"
+                    id="main-only"
+                    value="option2"
+                  />
+                  <img
+                    src="./assets/tick.svg"
+                    alt=""
+                    class="form-img absolute"
+                  />
+                  <label class="form-check-label ps-2" for="main-only"
+                    >Main only</label
+                  >
+                </div>
+                <div class="form-input-sect px-4 relative">
+                  <input
+                    class="form-input"
+                    type="radio"
+                    name="order-contents"
+                    id="option-only"
+                    value="option3"
+                  />
+                  <img
+                    src="./assets/tick.svg"
+                    alt=""
+                    class="form-img absolute"
+                  />
+                  <label class="form-check-label ps-2" for="option-only"
+                    >Option Only</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="input-cont">
+              <label for="goods" class="form-label font-heavy"
+                >Goods <span class="required">*</span></label
+              >
+              <select name="" id="goods" class="form-select">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+              </select>
+            </div>
+
+            <div class="input-cont w-100">
+              <label for="order-detail" class="form-label font-heavy"
+                >Order Detail</label
+              >
+              <textarea
+                name=""
+                id="order-detail"
+                cols="30"
+                rows="5"
+                class="form-control resize-none"
+              ></textarea>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center my-5">
+              <button class="btn btn-lg submit-btn">送信する</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+
+  <script>
+    const skilledNav = document.querySelector(".menu-btn");
+    const skilledNavOptions = document.querySelector(".skilled-nav-options");
+    skilledNavOptions.style.display = "none";
+
+    skilledNav.addEventListener("click", () => {
+      skilledNavOptions.style.display = "block";
+    });
+
+    skilledNav.addEventListener("blur", () => {
+      skilledNavOptions.style.display = "none";
+    });
+
+    const radioBtns = document.querySelectorAll(".form-input-sect");
+    const formImage = document.querySelector(".form-img");
+
+    radioBtns.forEach((button) => {
+      button.addEventListener("click", () => {
+        const allRadioInputs = document.querySelectorAll(".form-input");
+        const allFormImages = document.querySelectorAll(".form-img");
+        allRadioInputs.forEach((input) => (input.style.opacity = 1));
+        allFormImages.forEach((input) => (input.style.opacity = 0));
+
+        button.children[0].style.opacity = 0;
+        button.children[1].style.opacity = 1;
+      });
+    });
+  </script>
 </html>
