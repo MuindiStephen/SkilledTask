@@ -19,6 +19,15 @@
  <!-- Latest compiled JavaScript -->
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> 
 <style>
+
+@media (min-width: 2000px) {
+    #order{
+      display: inline-block;
+    }
+}
+
+
+
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 body, html {
@@ -34,8 +43,7 @@ body, html {
     display: inline;
 }
 
-body {
-          
+body { 
             background-color: #f4f4f4;
         }
         .container {
@@ -100,7 +108,6 @@ body {
     border-radius: 15px; 
     padding: 10px 20px;
     margin: 5px;
-    display: inline-block;
 }
 /* Full height image header */
 .bgimg-1 {
@@ -132,8 +139,8 @@ h1 a {
   
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-     <strong> <a href="#case" class="w3-bar-item w3-button" id="case" style="color: white;font-weight: bold; " >Case</a></strong>
-    </strong><a href="#demo" class="w3-bar-item w3-button" id="demo" style="color:white;font-weight: bold;"> Demo</a></strong>
+      <strong> <a href="#case" class="w3-bar-item w3-button" id="case" style="color: white;font-weight: bold; " >Case</a></strong>
+      <strong><a href="#demo" class="w3-bar-item w3-button" id="demo" style="color:white;font-weight: bold;"> Demo</a></strong>
       <strong><a href="#order" class="w3-bar-item w3-button" id="order" style="color:white; font-weight: bold;"></i> Order</a></strong>
     </div>
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -147,20 +154,21 @@ h1 a {
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Case</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Demo</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Order</a>
-
+  <a href="#case" onclick="w3_close()" class="w3-bar-item w3-button">Case</a>
+  <a href="#demo" onclick="w3_close()" class="w3-bar-item w3-button">Demo</a>
+  <a href="#order" onclick="w3_close()" class="w3-bar-item w3-button"
+  style="display: inline-block; @media (min-width: 200px) {
+    display: inline; 
+  }">Order</a>
 </nav>
-
 
 <!-- Feature Section -->
 <div class="w3-container" style="padding:108px 16px" id="about">
   <div style="display: flex; align-items:center; justify-content: space-between;">
-    <h3 style="font-size: 100px; color: black; font-weight: bold; text-align: left; margin-left: 20px;" >SKILLED</h3>
+    <h3 style="font-size: 100px; color: black; font-weight: bold; text-align: left; margin-left: 20px;">SKILLED</h3>
     <img src="main_image.png" style="display: inline-block;" alt="Main Image" />
   </div>
-  <p style="display: inline-block; color: white;margin-left: 30px; padding-left: 30px; padding-right: 30px; border-radius: 8px; background-color: red; font-weight: bold;">FREE TRIAL</p>
+  <p style="display: inline-block; color: white;margin-left: 30px; padding-left: 30px; padding-right: 30px; border-radius: 8px; background-color: red; font-weight: bold;text-align: center; width: 35%;max-width:  80%;">FREE TRIAL</p>
 
   <div style="display: flex; align-items: center; text-align: center; margin-top: 100px;">
     <img src="/home/md-steve/Pictures/image2.png" style="display: inline-block; float: none; margin-left: -30px;" />
@@ -404,7 +412,7 @@ h1 a {
   <hr id="dotted">
 
     <br>
-    <form action="/action_page.php">
+    <form action="/">
       <div class="form-group">
         <label for="companyname">Company Name:</label>
         <input type="companyname" class="form-control" placeholder="Company Name" id="companyname">
